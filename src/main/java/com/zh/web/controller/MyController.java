@@ -10,7 +10,13 @@ public class MyController {
     @RequestMapping("/login")
     @ResponseBody
     public String login(@RequestParam(value = "username", required = false)String username,
-            @RequestParam(value = "password", required = false)String password){
+            @RequestParam(value = "password", required = false)String password,
+                        @RequestParam(value = "password", required = false)String jsonData){
         return "Hello," + username + ". Your password is " + password;
+    }
+    @RequestMapping("/ajaxJson")
+    @ResponseBody
+    public String login(@RequestParam(value = "jsonData", required = false)String jsonData){
+        return "success";
     }
 }

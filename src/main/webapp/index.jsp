@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<title>欢迎</title>
+		<script src="<%=request.getContextPath() %>/js/jquery-1.12.1.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<h2>Hello World!</h2>
@@ -13,5 +14,26 @@
 			<input type="submit" value="提交"></input>
 		</form>
 		<span>当前IP:<%=request.getRemoteAddr() %></span>
+		<button type="button" name="myAjax" onclick="myAjax();">测试ajax长度</button>
+		<script>
+			function myAjax(){
+				var dataArr = new Array();
+				for(var i = 0; i < 10000; i++){
+					dataArr.push(i);
+				}
+				var jsonData = JSON.stringify(dataArr);
+				console.info(jsonData);
+				$.ajax({
+					url:"ajaxJson",
+					type:"post",
+					data:{
+						jsonData : jsonData
+					},
+					success:function(){
+						console.info("asdfasdf");
+					}
+				})
+			}
+		</script>
 	</body>
 </html>

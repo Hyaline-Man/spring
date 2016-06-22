@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <script type="text/javascript" src="../../../../../../js/chapter5/5-1.js"></script>
+    </head>
+    <body>
+        switch:
+        <pre>
+function convert(x){
+    switch(typeof x){
+    case "undefined":
+        return "undefined";
+    case "string":
+        return "'" + x + "'";
+    case "number":
+        return x.toString(16);
+    }
+}
+        </pre>
+    </body>
+</html>

@@ -15,7 +15,7 @@
     <!-- 设置不过滤内容，比如css,jquery,img等资源文件 -->
     <mvc:resources location="/*.html" mapping="/**.html"></mvc:resources>
     <mvc:resources location="/css/*" mapping="/css/**"></mvc:resources>
-    <mvc:resources location="/js/*" mapping="/js/**"></mvc:resources>
+    <mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
     <mvc:resources location="/images/*" mapping="/images/**"></mvc:resources>
      
     <!-- 添加注解驱动 -->
