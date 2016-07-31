@@ -17,6 +17,7 @@ public class MyController {
     @RequestMapping("/ajaxJson")
     @ResponseBody
     public String login(@RequestParam(value = "jsonData", required = false)String jsonData){
+        System.out.println("asdfasdf");
         return "success";
     }
 }

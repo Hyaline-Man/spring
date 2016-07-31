@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"  
-    pageEncoding="UTF-8"%>  
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
 	<head>
@@ -24,7 +24,7 @@
 				var jsonData = JSON.stringify(dataArr);
 				console.info(jsonData);
 				$.ajax({
-					url:"ajaxJson",
+					url:"<%=request.getContextPath()%>/ajaxJson",
 					type:"post",
 					data:{
 						jsonData : jsonData

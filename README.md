@@ -1,1 +1,1 @@
-spring练习  
+*Spring MVC sample*
