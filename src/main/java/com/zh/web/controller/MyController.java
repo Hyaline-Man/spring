@@ -14,10 +14,12 @@ public class MyController {
                         @RequestParam(value = "password", required = false)String jsonData){
         return "Hello," + username + ". Your password is " + password;
     }
+
     @RequestMapping("/ajaxJson")
     @ResponseBody
     public String login(@RequestParam(value = "jsonData", required = false)String jsonData){
         System.out.println("asdfasdf");
         return "success";
     }
+
 }
