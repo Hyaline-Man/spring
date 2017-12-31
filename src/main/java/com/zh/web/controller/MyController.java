@@ -22,4 +22,10 @@ public class MyController {
         return "success";
     }
 
+    @RequestMapping("/test")
+    @ResponseBody
+    public String test(){
+//        System.out.println("asdfasdf");
+        return "success";
+    }
 }
